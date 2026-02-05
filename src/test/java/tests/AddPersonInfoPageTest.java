@@ -33,8 +33,10 @@ public class AddPersonInfoPageTest extends SauceDemoBaseClass {
 	@BeforeMethod
 	public void preSteps() throws IOException {
 		loginPageObj = new LoginPage(driver);
-		loginPageObj.setUserName(UtilityClass.readDataFromPropertiesFile("userName"));
-		loginPageObj.setPassword(UtilityClass.readDataFromPropertiesFile("password"));
+		//loginPageObj.setUserName(UtilityClass.readDataFromPropertiesFile("userName"));
+		//loginPageObj.setPassword(UtilityClass.readDataFromPropertiesFile("password"));
+		loginPageObj.setUserName("standard_user");
+		loginPageObj.setPassword("secret_sauce");
 		loginPageObj.clickOnLoginButton(driver);
 		
 		inventoryPageObj = new InventoryPage(driver);
@@ -57,7 +59,7 @@ public class AddPersonInfoPageTest extends SauceDemoBaseClass {
 	    test = report.createTest("validateAddPersonInfoPageUrl");
 		
 		String actualUrl = driver.getCurrentUrl();
-		String expectedUrl = UtilityClass.readDataFromExcelFile(4, 0);
+		String expectedUrl = "https://www.saucedemo.com/checkout-step-one.html";
 		test.info("got the expected url");
 		assertEquals(actualUrl, expectedUrl);
 		test.pass("Add Person Info Page Url verified");
