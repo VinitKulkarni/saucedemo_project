@@ -28,8 +28,10 @@ public class InventoryPageTest extends SauceDemoBaseClass {
 	@BeforeMethod
 	public void preSteps() throws IOException {
 		LoginPage loginPageObj = new LoginPage(driver);
-		loginPageObj.setUserName(UtilityClass.readDataFromPropertiesFile("userName"));
-		loginPageObj.setPassword(UtilityClass.readDataFromPropertiesFile("password"));
+		//loginPageObj.setUserName(UtilityClass.readDataFromPropertiesFile("userName"));
+		//loginPageObj.setPassword(UtilityClass.readDataFromPropertiesFile("password"));
+		loginPageObj.setUserName("standard_user");
+		loginPageObj.setPassword("secret_sauce");
 		loginPageObj.clickOnLoginButton(driver);
 	}
 	
@@ -46,7 +48,7 @@ public class InventoryPageTest extends SauceDemoBaseClass {
 		inventoryPageObj.clickOnProduct();
 		test.info("clicked on product");
 		String actualUrl = driver.getCurrentUrl();
-		String expectedUrl = UtilityClass.readDataFromExcelFile(1, 0);
+		String expectedUrl = "https://www.saucedemo.com/inventory-item.html?id=0";
 		assertEquals(actualUrl, expectedUrl);
 
 		test.pass("Inventory Page Url Verified");
