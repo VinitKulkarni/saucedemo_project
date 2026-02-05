@@ -29,7 +29,7 @@ public class LoginPageTest extends SauceDemoBaseClass {
         test = report.createTest("validateLoginPageUrl");
 		
 		String actualUrl = driver.getCurrentUrl();
-		String expectedUrl = UtilityClass.readDataFromExcelFile(0, 0);
+		String expectedUrl = "https://www.saucedemo.com/";
 		assertEquals(actualUrl, expectedUrl);
 		test.pass("Login Sucess");
 		report.flush();
