@@ -45,12 +45,5 @@
             <version>5.1.1</version>
         </dependency>
 
-
-
-        <dependency>
-        	<groupId>com.test</groupId>
-        	<artifactId>NeoStox</artifactId>
-        	<version>0.0.1-SNAPSHOT</version>
-        </dependency>
   </dependencies>
 </project>
