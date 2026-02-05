@@ -35,8 +35,10 @@ public class CheckOutOverViewPageTest extends SauceDemoBaseClass {
 	@BeforeMethod
 	public void preSteps() throws IOException {
 		LoginPage loginPageObj = new LoginPage(driver);
-		loginPageObj.setUserName(UtilityClass.readDataFromPropertiesFile("userName"));
-		loginPageObj.setPassword(UtilityClass.readDataFromPropertiesFile("password"));
+		//loginPageObj.setUserName(UtilityClass.readDataFromPropertiesFile("userName"));
+		//loginPageObj.setPassword(UtilityClass.readDataFromPropertiesFile("password"));
+		loginPageObj.setUserName("standard_user");
+		loginPageObj.setPassword("secret_sauce");
 		loginPageObj.clickOnLoginButton(driver);
 		
 		inventoryPageObj = new InventoryPage(driver);
@@ -66,7 +68,7 @@ public class CheckOutOverViewPageTest extends SauceDemoBaseClass {
 		
 		
 		String actualUrl = driver.getCurrentUrl();
-		String expectedUrl = UtilityClass.readDataFromExcelFile(5, 0);
+		String expectedUrl = "https://www.saucedemo.com/checkout-step-two.html";
 		assertEquals(actualUrl, expectedUrl);
 		test.pass("Check Out Over View Page Url verified");
 	}
