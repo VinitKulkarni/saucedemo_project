@@ -46,7 +46,7 @@ public class InventoryPageTest extends SauceDemoBaseClass {
 		inventoryPageObj.clickOnProduct();
 		test.info("clicked on product");
 		String actualUrl = driver.getCurrentUrl();
-		String expectedUrl = "https://www.saucedemo.com/inventory-item.html?id=0";
+		String expectedUrl = UtilityClass.readDataFromExcelFile(1, 0);
 		assertEquals(actualUrl, expectedUrl);
 
 		test.pass("Inventory Page Url Verified");
