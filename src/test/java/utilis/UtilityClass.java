@@ -21,7 +21,8 @@ public class UtilityClass {
 	}
 	
 	public static String readDataFromExcelFile(int rowIndex, int cellIndex) throws EncryptedDocumentException, IOException {
-		File myfile = new File("C:\\Users\\vinit\\OneDrive\\Desktop\\SauceDemo.xlsx");
+		String excelFilePath = System.getProperty("user.dir")+"/test_data/SauceDemo.xlsx";
+		File myfile = new File(excelFilePath);
 		Sheet Mysheet = WorkbookFactory.create(myfile).getSheet("Sheet1");
 		
 		//String loginPageUrl = Mysheet.getRow(0).getCell(0).getStringCellValue();
