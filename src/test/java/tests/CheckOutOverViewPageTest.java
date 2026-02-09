@@ -66,7 +66,7 @@ public class CheckOutOverViewPageTest extends SauceDemoBaseClass {
 		
 		
 		String actualUrl = driver.getCurrentUrl();
-		String expectedUrl = "https://www.saucedemo.com/checkout-step-two.html";
+		String expectedUrl = UtilityClass.readDataFromExcelFile(5, 0);
 		assertEquals(actualUrl, expectedUrl);
 		test.pass("Check Out Over View Page Url verified");
 	}
