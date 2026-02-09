@@ -19,8 +19,7 @@ public class SauceDemoBaseClass {
         ConfigReader.loadConfig();
 		
 		driver = new FirefoxDriver();
-		//driver.get(UtilityClass.readDataFromPropertiesFile("url"));
-		driver.get("https://www.saucedemo.com/");
+		driver.get(UtilityClass.readDataFromPropertiesFile("url"));
 		driver.manage().window().maximize();
 	}
 	
