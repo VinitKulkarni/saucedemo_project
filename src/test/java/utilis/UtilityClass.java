@@ -14,7 +14,7 @@ public class UtilityClass {
 	public static String readDataFromPropertiesFile(String key) throws IOException {
 		Properties prop = new Properties();
 		String filePath = System.getProperty("user.dir");
-		FileInputStream reader = new FileInputStream(filePath + "/data.properties");
+		FileInputStream reader = new FileInputStream(filePath + "/test_data/saucedemo_data.properties");
 		prop.load(reader);
 		String value = prop.getProperty(key);
 		return value;
