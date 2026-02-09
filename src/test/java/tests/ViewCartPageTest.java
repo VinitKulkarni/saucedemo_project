@@ -52,7 +52,7 @@ public class ViewCartPageTest extends SauceDemoBaseClass {
 		
 		test.info("Logged In and Now inside Cart Page");
 		String actualUrl = driver.getCurrentUrl();
-		String expectedUrl = "https://www.saucedemo.com/cart.html";
+		String expectedUrl = UtilityClass.readDataFromExcelFile(3, 0);
 		assertEquals(actualUrl, expectedUrl);
 		test.pass("View Cart Page URL verified");
 	}
