@@ -71,7 +71,7 @@ public class OrderPlacedPageTest extends SauceDemoBaseClass {
 		
 		
 		String actualUrl = driver.getCurrentUrl();
-		String expectedUrl = "https://www.saucedemo.com/checkout-complete.html";
+		String expectedUrl = UtilityClass.readDataFromExcelFile(6, 0);
 		assertEquals(actualUrl, expectedUrl);
 		test.pass("Order Placed Page Url verified");
 	}
