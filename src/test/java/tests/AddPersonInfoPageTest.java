@@ -57,7 +57,7 @@ public class AddPersonInfoPageTest extends SauceDemoBaseClass {
 	    test = report.createTest("validateAddPersonInfoPageUrl");
 		
 		String actualUrl = driver.getCurrentUrl();
-		String expectedUrl = "https://www.saucedemo.com/checkout-step-one.html";
+		String expectedUrl = UtilityClass.readDataFromExcelFile(4, 0);
 		test.info("got the expected url");
 		assertEquals(actualUrl, expectedUrl);
 		test.pass("Add Person Info Page Url verified");
