@@ -13,7 +13,8 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class UtilityClass {
 	public static String readDataFromPropertiesFile(String key) throws IOException {
 		Properties prop = new Properties();
-		FileInputStream reader = new FileInputStream("C:\\Users\\vinit\\eclipse-workspace\\SauceDemo\\src\\test\\java\\utilis\\saucedemofile.properties");
+		String filePath = System.getProperty("user.dir");
+		FileInputStream reader = new FileInputStream(filePath + "/data.properties");
 		prop.load(reader);
 		String value = prop.getProperty(key);
 		return value;
