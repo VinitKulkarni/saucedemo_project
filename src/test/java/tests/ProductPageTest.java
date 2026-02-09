@@ -50,7 +50,7 @@ public class ProductPageTest extends SauceDemoBaseClass {
 		
         test.info("Logged In and Now In the product page");
 		String actualUrl = driver.getCurrentUrl();
-		String expectedUrl = "https://www.saucedemo.com/inventory-item.html?id=0";
+		String expectedUrl = UtilityClass.readDataFromExcelFile(2, 0);
 		assertEquals(actualUrl, expectedUrl);
 		test.pass("Product Page URL verified");
 	}
