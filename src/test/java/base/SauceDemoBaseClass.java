@@ -15,6 +15,9 @@ public class SauceDemoBaseClass {
 	
 	@BeforeClass
 	public void initalSetup() throws IOException {
+		//load data.properties file
+        ConfigReader.loadConfig();
+		
 		driver = new FirefoxDriver();
 		//driver.get(UtilityClass.readDataFromPropertiesFile("url"));
 		driver.get("https://www.saucedemo.com/");
