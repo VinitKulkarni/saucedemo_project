@@ -37,10 +37,8 @@ public class OrderPlacedPageTest extends SauceDemoBaseClass {
 	@BeforeMethod
 	public void preSteps() throws IOException {
 		loginPageObj = new LoginPage(driver);
-		//loginPageObj.setUserName(UtilityClass.readDataFromPropertiesFile("userName"));
-		//loginPageObj.setPassword(UtilityClass.readDataFromPropertiesFile("password"));
-		loginPageObj.setUserName("standard_user");
-		loginPageObj.setPassword("secret_sauce");
+		loginPageObj.setUserName(UtilityClass.readDataFromPropertiesFile("userName"));
+		loginPageObj.setPassword(UtilityClass.readDataFromPropertiesFile("password"));
 		loginPageObj.clickOnLoginButton(driver);
 		
 		inventoryPageObj = new InventoryPage(driver);
